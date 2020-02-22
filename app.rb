@@ -17,6 +17,9 @@ class App < Sinatra::Base
   
   get '/goodbye/:name' do
     @name = all_the_names.select do |name|
+      name.id = params[:id]
+    end.first 
+    erb :'/names/show.html'
   end 
   
   get '/multiply/:num1/:num2' do 
