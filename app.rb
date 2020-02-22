@@ -17,7 +17,7 @@ class App < Sinatra::Base
   
   get '/goodbye/:name' do
     @name = all_the_names.select do |name|
-      name.id = params[:id]
+      name.name = params[:name]
     end.first 
     erb :'/names/show.html'
   end 
