@@ -19,7 +19,7 @@ class App < Sinatra::Base
     @name = all_the_names.select do |name|
       name.name = params[:name]
     end.first 
-    erb :'/names/show.html'
+    erb :'names.html'
   end 
   
   get '/multiply/:num1/:num2' do 
